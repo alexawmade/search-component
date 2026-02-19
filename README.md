@@ -29,17 +29,6 @@ Trigger it with **⌘ K** (macOS) or **Ctrl K** (Windows).
 
 ---
 
-## Getting started
-
-```bash
-npm install
-npm run dev
-```
-
-Open [http://localhost:5173](http://localhost:5173) and press **⌘ K** or **Ctrl K**.
-
----
-
 ## Project structure
 
 ```
