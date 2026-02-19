@@ -9,7 +9,7 @@ function GitHubIcon() {
 }
 
 // GitHub repo URL — update after pushing
-const GITHUB_URL = '#'
+const GITHUB_URL = 'https://github.com/alexawmade/search-component'
 
 function FooterChip() {
   return (
