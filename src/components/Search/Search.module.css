@@ -1,0 +1,190 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--search-overlay);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 160px;
+}
+
+.dialog {
+  background: var(--search-bg);
+  border: 1px solid var(--search-border);
+  border-radius: 12px;
+  width: 755px;
+  max-width: calc(100vw - 32px);
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Filters bar ── */
+
+.filtersWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.2s ease;
+}
+
+.filtersOpen {
+  grid-template-rows: 1fr;
+}
+
+.filtersInner {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.filtersOpen .filtersInner {
+  opacity: 1;
+}
+
+.filtersBar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.filtersBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Horizontal filters scrollbar ── */
+
+.filtersScrollbar {
+  position: relative;
+  height: 3px;
+  margin: 0 12px 5px;
+}
+
+.filtersScrollbarThumb {
+  position: absolute;
+  top: 0;
+  height: 3px;
+  border-radius: 100px;
+  background: var(--search-scrollbar);
+}
+
+.filtersDivider {
+  flex-shrink: 0;
+  width: 1px;
+  height: 16px;
+  background: var(--search-border);
+}
+
+.resultsArea {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.resultsWrapper {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+  padding: 0 4px 4px;
+  /* Hide native scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.resultsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Custom scrollbar ── */
+
+.scrollbar {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  width: 4px;
+  z-index: 10;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.scrollbarVisible {
+  opacity: 1;
+}
+
+.scrollbarThumb {
+  position: absolute;
+  left: 0;
+  width: 4px;
+  border-radius: 100px;
+  background: var(--search-scrollbar);
+  transition: top 0.05s linear;
+}
+
+/* ── Footer ── */
+
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 8px 16px;
+  border-top: 1px solid var(--search-border);
+}
+
+.footerHint {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--search-footer-text);
+  line-height: 18px;
+}
+
+.settingsBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border-radius: 6px;
+  border: none;
+  background: none;
+  color: var(--search-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.settingsBtn:hover,
+.settingsBtnOpen {
+  background: var(--search-result-hover);
+  color: var(--search-text);
+}
+
+/* ── Sections ── */
+
+.section {
+  padding: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  padding: 8px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--search-placeholder);
+}
+
+.sectionLabel {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--search-placeholder);
+  padding: 6px 8px 8px;
+  line-height: normal;
+}

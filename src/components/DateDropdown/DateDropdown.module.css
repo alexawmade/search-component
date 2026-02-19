@@ -1,0 +1,200 @@
+.panel {
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 8px;
+  width: 268px;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 8px 0 6px;
+}
+
+/* ── Quick options ── */
+
+.quickRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+
+.quickBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dropdown-text);
+  padding: 4px 0;
+  text-align: left;
+  transition: opacity 0.1s ease;
+}
+
+.quickBtn:hover {
+  opacity: 0.75;
+}
+
+.clearBtn {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--filter-chip-muted);
+  padding: 4px 0;
+}
+
+.quickList {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--dropdown-border);
+  margin: 8px 0;
+}
+
+/* ── Calendar header ── */
+
+.calHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px 8px 12px;
+}
+
+.monthLabel {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dropdown-text);
+}
+
+.navBtns {
+  display: flex;
+  gap: 2px;
+}
+
+.navBtn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: var(--filter-chip-muted);
+  transition: background 0.1s ease, color 0.1s ease;
+}
+
+.navBtn:hover {
+  background: var(--dropdown-item-hover);
+  color: var(--dropdown-text);
+}
+
+/* ── Day headers ── */
+
+.dayHeaders {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0 4px;
+}
+
+.dayHeader {
+  text-align: center;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--filter-chip-muted);
+  padding-bottom: 6px;
+}
+
+/* ── Day grid ── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 0 4px;
+}
+
+.dayCell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+}
+
+/* Range strip */
+.inRange::before,
+.rangeStart::before,
+.rangeEnd::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  background: rgba(39, 131, 222, 0.15);
+  z-index: 0;
+}
+
+.rangeStart::before {
+  left: 50%;
+}
+
+.rangeEnd::before {
+  right: 50%;
+}
+
+/* Day button */
+.day {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--dropdown-text);
+  cursor: pointer;
+  transition: background 0.1s ease;
+}
+
+.day:hover {
+  background: var(--dropdown-item-hover);
+}
+
+.today {
+  background: #e05252;
+  color: #fff;
+}
+
+.today:hover {
+  background: #c94444;
+}
+
+.selected {
+  background: #2683de;
+  color: #fff;
+}
+
+.selected:hover {
+  background: #1a6dc4;
+}
+
+.muted {
+  color: var(--filter-chip-muted);
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}

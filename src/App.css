@@ -1,0 +1,14 @@
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.page {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 24px;
+}

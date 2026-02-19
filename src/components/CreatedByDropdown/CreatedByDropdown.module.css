@@ -1,0 +1,152 @@
+.panel {
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 8px;
+  min-width: 220px;
+  max-width: 280px;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* ── Chips box ── */
+
+.chipsBox {
+  position: relative;
+  margin: 4px;
+  padding: 6px 28px 6px 6px;
+  border: 1px solid var(--dropdown-border);
+  border-radius: 6px;
+  background: var(--dropdown-item-selected);
+  display: flex;
+  align-items: flex-start;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 2px 4px 2px 7px;
+  background: var(--dropdown-bg);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 4px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--dropdown-text);
+  white-space: nowrap;
+}
+
+.chipRemove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dropdown-text);
+  cursor: pointer;
+  padding: 0 2px;
+  font-size: 15px;
+  line-height: 1;
+  opacity: 0.5;
+  transition: opacity 0.1s ease;
+}
+
+.chipRemove:hover {
+  opacity: 1;
+}
+
+.clearAll {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--dropdown-text);
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.45;
+  transition: opacity 0.1s ease;
+}
+
+.clearAll:hover {
+  opacity: 1;
+}
+
+/* ── Search input ── */
+
+.searchBox {
+  padding: 4px 4px 0;
+}
+
+.searchInput {
+  width: 100%;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid var(--dropdown-border);
+  background: transparent;
+  color: var(--dropdown-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--filter-chip-muted);
+}
+
+/* ── List ── */
+
+.list {
+  padding: 4px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+  padding: 0 9px;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--dropdown-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.1s ease;
+}
+
+.item:hover {
+  background: var(--dropdown-item-hover);
+}
+
+.you {
+  color: var(--filter-chip-muted);
+  font-weight: 400;
+}
+
+.empty {
+  padding: 6px 12px 8px;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  color: var(--filter-chip-muted);
+}

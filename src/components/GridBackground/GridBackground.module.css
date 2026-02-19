@@ -1,0 +1,24 @@
+.grid {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: var(--grid-size) var(--grid-size);
+
+  -webkit-mask-image: radial-gradient(
+    circle var(--spotlight-radius) at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    circle var(--spotlight-radius) at var(--mouse-x, -999px) var(--mouse-y, -999px),
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
+}

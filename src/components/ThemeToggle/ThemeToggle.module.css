@@ -1,0 +1,74 @@
+.toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 200;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--toggle-border);
+  background: var(--toggle-bg);
+  color: var(--toggle-fg);
+  cursor: pointer;
+
+  box-shadow: 0 2px 8px var(--toggle-shadow);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.15s ease;
+}
+
+.toggle:hover {
+  background: var(--toggle-bg-hover);
+  box-shadow: 0 4px 16px var(--toggle-shadow);
+}
+
+.toggle:active {
+  opacity: 0.7;
+}
+
+/* ── Icon animation ── */
+
+.iconClip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.iconInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.exiting {
+  transform: translateY(-8px);
+  opacity: 0;
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+.entering {
+  animation: iconEnter 0.2s ease forwards;
+}
+
+@keyframes iconEnter {
+  from {
+    transform: translateY(8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

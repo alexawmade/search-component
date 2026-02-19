@@ -1,0 +1,166 @@
+.card {
+  width: 340px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+/* ── Preview area ── */
+
+.preview {
+  position: relative;
+  background: var(--card-preview-bg);
+  padding: 56px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--card-badge-fg);
+  background: var(--card-badge-bg);
+  border: 1px solid var(--card-badge-border);
+  border-radius: 5px;
+  padding: 3px 7px;
+}
+
+.previewContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.iconRing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+
+  /* Light mode — diagonal metallic with centre highlight */
+  background: linear-gradient(
+    135deg,
+    #c8c8d8 0%,
+    #dcdcec 25%,
+    #f0f0f8 50%,
+    #d8d8e8 75%,
+    #c4c4d4 100%
+  );
+  border: none;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+  color: #606070;
+}
+
+:global([data-theme='dark']) .iconRing {
+  background: linear-gradient(135deg, #3a3a44 0%, #26262e 50%, #1a1a22 100%);
+  border: none;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.18),
+    0 4px 14px rgba(0, 0, 0, 0.45),
+    0 1px 3px rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.shortcutRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shortcutOr {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--card-muted);
+  padding: 0 2px;
+}
+
+.key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 26px;
+  padding: 0 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--key-fg);
+  background: var(--key-bg);
+  border: 1px solid var(--key-border);
+  border-radius: 5px;
+  box-shadow: var(--key-shadow);
+  user-select: none;
+}
+
+/* ── Divider ── */
+
+.divider {
+  height: 1px;
+  background: var(--card-divider);
+}
+
+/* ── Info area ── */
+
+.info {
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.heading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--card-heading);
+  line-height: 1.4;
+}
+
+.body {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--card-body);
+  line-height: 1.55;
+}
+
+.muted {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--card-muted);
+  line-height: 1.55;
+}
+
+.code {
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', monospace;
+  font-size: 12px;
+  color: var(--card-code-fg);
+  background: var(--card-code-bg);
+  border: 1px solid var(--card-code-border);
+  border-radius: 3px;
+  padding: 1px 5px;
+}

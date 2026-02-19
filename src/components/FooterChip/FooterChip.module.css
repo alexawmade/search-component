@@ -1,0 +1,55 @@
+.chip {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 50;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--footer-chip-border);
+  background: var(--footer-chip-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 16px rgba(0, 0, 0, 0.07);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--footer-chip-text);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.link {
+  color: var(--footer-chip-link);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.sep {
+  width: 1px;
+  height: 12px;
+  background: var(--footer-chip-border);
+  flex-shrink: 0;
+}
+
+.ghLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--footer-chip-link);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.ghLink:hover {
+  opacity: 0.6;
+}

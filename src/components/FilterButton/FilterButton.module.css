@@ -1,0 +1,71 @@
+.wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border-radius: 100px;
+  border: none;
+  background: transparent;
+  color: var(--search-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--filter-inactive-hover);
+}
+
+/* ── Circle (only visible when active) ── */
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 99px;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+/* ── Active state ── */
+
+.active {
+  color: var(--search-bg);
+}
+
+.active .circle {
+  background: #2783de;
+}
+
+.active:hover {
+  background: var(--filter-active-hover);
+}
+
+/* ── Tooltip ── */
+
+.tooltip {
+  position: fixed;
+  transform: translateX(-50%);
+  background: #3a3a38;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: normal;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 9999;
+}
