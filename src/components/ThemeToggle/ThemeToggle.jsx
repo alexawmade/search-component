@@ -23,7 +23,7 @@ const MoonIcon = () => (
 
 // phase: 'idle' | 'exiting' | 'entering'
 function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+  const [isDark, setIsDark] = useState(true)
   const [phase, setPhase] = useState('idle')
 
   const toggle = useCallback(() => {
